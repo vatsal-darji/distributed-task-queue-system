@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: task_pg
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: dtqs
+    ports:
+      - "5433:5432"
+
+  redis:
+    image: redis:7
+    container_name: task_redis
+    ports:
+      - "6379:6379"
